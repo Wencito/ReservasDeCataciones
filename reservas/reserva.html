@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Reserva</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: #f9f9f9;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: space-between;
+        }
+        .form-container {
+            width: 60%;
+            padding-right: 20px;
+        }
+        .tour-info {
+            width: 35%;
+            padding: 20px;
+            background-color: #f1f1f1;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        label {
+            margin-bottom: 5px;
+            font-weight: bold;
+        }
+        input, select {
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        button {
+            background-color: orange;
+            color: white;
+            padding: 10px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            border-radius: 5px;
+        }
+        button:hover {
+            background-color: darkorange;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-container">
+            <h2>Formulario de Reserva</h2>
+            <form action="http://localhost:3000/reserve" method="post">
+                <label for="nombre">Nombre Completo:</label>
+                <input type="text" id="nombre" name="nombre" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="telefono">Teléfono:</label>
+                <input type="text" id="telefono" name="telefono" required>
+
+                <label for="visitantes">Visitantes:</label>
+                <select id="visitantes" name="visitantes" required>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                </select>
+
+                <label for="idioma">Idioma:</label>
+                <select id="idioma" name="idioma" required>
+                    <option value="Español">Español</option>
+                    <option value="Inglés">Inglés</option>
+                </select>
+
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+
+                <label for="tarjeta">Número de Tarjeta:</label>
+                <input type="text" id="tarjeta" name="tarjeta" required>
+
+                <button type="submit">Reservar</button>
+            </form>
+        </div>
+        <div class="tour-info">
+            <h2>Detalles del Tour</h2>
+            <p>El clásico recorrido por la bodega donde conocerás nuestra historia y el proceso de elaboración de nuestros vinos.</p>
+            <p>Visitarás las zonas de lagares, tanques de fermentación y salas de añejamiento en grandes toneles.</p>
+            <p>También podrás recorrer el Museo de la familia López, donde apreciarás más de 120 años de patrimonio histórico, cultural y regional.</p>
+            <p>Finaliza con degustación de un vino blanco y un vino tinto.</p>
+            <h3>Condiciones de reserva:</h3>
+            <ul>
+                <li>Ningún cargo será realizado al momento de reservar.</li>
+                <li>Se solicita una tarjeta solo para asegurar la reserva.</li>
+                <li>Pagará el monto total el día de la reserva.</li>
+                <li>Menores de 18 años no abonan la actividad.</li>
+                <li>Se solicita reservar a partir de los 7 años.</li>
+                <li>Cancelación o modificación hasta 24hs antes.</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>
