@@ -13,6 +13,7 @@
             <li><a href="index.html" id="home-link">Inicio</a></li>
             <li><a href="#" id="profile-link">Perfil</a></li>
             <li><a href="#" id="settings-link">Configuración</a></li>
+            <li><a href="#reservas-lista" id="reservas-link">Reservas</a></li>
         </ul>
     </div>
     <div class="main-content">
@@ -28,7 +29,26 @@
             <h1>Configuración</h1>
             <p>Este es el contenido de configuración.</p>
         </div>
+        <div id="reservas-lista" class="content">
+            <h1>Lista de Reservas</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Teléfono</th>
+                        <th>Visitantes</th>
+                        <th>Idioma</th>
+                        <th>Fecha</th>
+                        <th>Acciones</th>
+                    </tr>
+                </thead>
+                <tbody id="reservas-tbody">
+                    <!-- Las reservas se mostrarán aquí -->
+                </tbody>
+            </table>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
 </html>
+
